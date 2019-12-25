@@ -1,0 +1,16 @@
+/*利用HashSet元素不重複的特性，也利用加入為否的特性判斷*/
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if(nums.length==0){
+            return false;
+        }
+        
+        Set<Integer> set = new HashSet<>();
+        for(int i=0;i<nums.length;i++) {
+            if(!set.add(nums[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+}
